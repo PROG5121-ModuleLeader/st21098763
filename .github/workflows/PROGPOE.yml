@@ -31,7 +31,7 @@ jobs:
      # Compiles classes to test 
       - name: compile classes
         working-directory: ./src
-        run: javac -cp "../testresources/junit-platform-console-standalone-1.6.0.jar" ./st2123456/St2123456.java ./st2123456/Message.java  "../test/st2123456/st2123456Test.java"  "../test/st2123456/MessageTest.java"  
+        run: javac -cp "../testresources/junit-platform-console-standalone-1.6.0.jar" ./st2123456/St2123456.java ./st2123456/Message.java  "../test/st2123456/St2123456Test.java"  "../test/st2123456/MessageTest.java"  
 
     # list contents of src to verify that classess compiled 
       - name: List contents of src directory after compile
@@ -42,12 +42,12 @@ jobs:
        # copy compiled classes to test directory 
       - name : copy compiled classes to testresources directory 
         working-directory: ./src/st2123456
-        run: cp -t  "../../test/st2123456" Message.class st2123456.class
+        run: cp -t  "../../test/st2123456" Message.class St2123456.class
         
         #copy compiled tests 
       - name : copy compiled Test classes to testresources directory 
         working-directory: ./test/st2123456
-        run: cp -t  "../../testresources/" Message.class st2123456.class 
+        run: cp -t  "../../testresources/" Message.class St2123456.class 
         
         # list contents or directory
       - name: List contents test package
