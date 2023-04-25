@@ -26,7 +26,7 @@ public class MessageTest
     @Test
     public void testGetMessage() 
     {
-        String expected = "I have arrived";
+        String expected = "I have arrived passed";
         String actual = message.getMessage();
         
         assertEquals(expected,actual );
